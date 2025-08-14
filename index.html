@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoViz - Learn DSA Visually</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🔍 AlgoViz</h1>
+            <p class="tagline">Learn Data Structures & Algorithms Visually</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-buttons">
+                <button class="nav-btn active" data-category="sorting">Sorting</button>
+                <button class="nav-btn" data-category="searching">Searching</button>
+                <button class="nav-btn" data-category="arrays">Arrays</button>
+                <button class="nav-btn" data-category="stacks">Stacks</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Algorithm Selection -->
+            <div class="algorithm-grid" id="algorithm-grid">
+                <!-- Algorithms will be populated by JavaScript -->
+            </div>
+
+            <!-- Algorithm Details Modal -->
+            <div class="modal" id="algorithm-modal">
+                <div class="modal-content">
+                    <span class="close-btn" id="close-modal">&times;</span>
+                    
+                    <!-- Algorithm Info -->
+                    <div class="algorithm-info">
+                        <h2 id="algo-title">Algorithm Name</h2>
+                        <div class="complexity-info">
+                            <div class="complexity-item">
+                                <span class="label">Time Complexity:</span>
+                                <span id="time-complexity">O(n²)</span>
+                            </div>
+                            <div class="complexity-item">
+                                <span class="label">Space Complexity:</span>
+                                <span id="space-complexity">O(1)</span>
+                            </div>
+                        </div>
+                        <p id="algo-description">Algorithm description will appear here.</p>
+                    </div>
+
+                    <!-- Visualization Area -->
+                    <div class="visualization-section">
+                        <h3>Visual Demonstration</h3>
+                        <div class="controls">
+                            <button id="generate-btn" class="btn btn-primary">Generate Array</button>
+                            <button id="start-btn" class="btn btn-success">Start Algorithm</button>
+                            <button id="reset-btn" class="btn btn-secondary">Reset</button>
+                            <div class="control-group">
+                                <label for="speed-slider">Speed:</label>
+                                <input type="range" id="speed-slider" min="50" max="500" value="200">
+                                <span id="speed-value">200ms</span>
+                            </div>
+                            <div class="control-group">
+                                <label for="size-slider">Array Size:</label>
+                                <input type="range" id="size-slider" min="5" max="20" value="10">
+                                <span id="size-value">10</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Visualization Container -->
+                        <div id="visualization-container">
+                            <div id="array-container"></div>
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Comparisons:</span>
+                                    <span id="comparisons">0</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Swaps:</span>
+                                    <span id="swaps">0</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Steps:</span>
+                                    <span id="steps">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Legend -->
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="legend-color default"></div>
+                                <span>Unsorted</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color comparing"></div>
+                                <span>Comparing</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color swapping"></div>
+                                <span>Swapping</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color sorted"></div>
+                                <span>Sorted</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Code Section -->
+                    <div class="code-section">
+                        <h3>C Implementation</h3>
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-tab="c-code">C Code</button>
+                            <button class="code-tab" data-tab="explanation">Step-by-Step</button>
+                        </div>
+                        <div class="code-content">
+                            <pre id="c-code" class="code-block active"><code>// C code will be displayed here</code></pre>
+                            <div id="explanation" class="explanation-block">
+                                <ol id="explanation-steps">
+                                    <!-- Steps will be populated by JavaScript -->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 AlgoViz - Learn DSA the Visual Way</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
