@@ -2,6 +2,7 @@
 
 **AlgoViz** is a web-based tool that visually demonstrates how different algorithms work.
 It provides an interactive interface where you can choose an algorithm, customize input data, and watch the step-by-step execution.
+https://raysharma.github.io/AlgoViz/
 
 ---
 
